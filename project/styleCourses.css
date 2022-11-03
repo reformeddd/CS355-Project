@@ -1,0 +1,346 @@
+:root{
+	--footer-color: rgba(0,0,0,0);
+	--footer-word-color: #8e8e8e;
+}
+
+body{
+	background-color: #2d2d2d;
+	color: #d5d5d5;
+	font-family: sans-serif;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+
+
+header{
+	background: #E9E9E9;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+header:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+
+
+.contain{
+	width: 95%;
+	margin: 0 auto;
+}
+
+.logo{
+	float: left;
+}
+
+nav{
+	float: right;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li{
+	display: inline-block;
+	margin-left: 70px;
+}
+
+.cartLogo{
+	cursor: pointer;
+}
+
+nav a{
+	color: #444;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+nav a:hover{
+	color: #000;
+}
+
+
+
+
+.course{
+	align-items:center;
+	justify-content: center;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.courses{
+	display:flex;
+	flex-wrap: wrap;
+	width: 70%;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	transform: translateX(400%);
+	transition: transform 0.4s ease;
+}
+
+
+.courses img{
+	border-radius: 10px;
+}
+
+.courses:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.courses.show {
+  transform: translateX(0);
+}
+
+
+.overlay {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.overlay .hovered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+	border-radius: 10px;
+}
+.overlay:hover .hovered {
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}
+
+.overlay > .hovered{
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+
+.overlay:hover> .hovered{
+	transform: translateY(0);
+}
+
+.container{
+	padding-top:50px;
+}
+
+.hovered ul{
+	font-size: 25px;
+}
+
+.hovered li{
+	font-size: 17px;
+	margin-top: 5px;
+}
+
+
+
+
+.shoppingCart{
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 300px;
+	min-height: 100vh;
+	padding: 20px;
+	background: #d1d1d1;
+	color: #4c4c4c;
+	transition: 0.3s;
+	z-index: 1000;
+}
+
+.shoppingCart.active{
+	right: 0;
+}
+
+.shopCartTitle{
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-top: 2rem;
+}
+
+.cartContainer{
+	display: grid;
+	grid-template-columns: 30% 50% 20%;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.cartImg{
+	width: 100px;
+	height: 100px;
+	padding: 1px;
+	border-radius: 10px;
+	margin-right: 5px;
+	
+}
+
+.cartDetails{
+	font-family: sans-serif;
+	display: grid;
+	row-gap: 0.5rem;
+	margin-left: 15px;
+}
+
+.cartCourse{
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.cartPrice{
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.cartQty{
+	border:1px solid #4c4c4c;
+	width: 2.4rem;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.removeCart{
+	cursor: pointer;
+}
+
+.total{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1.5rem;
+	border-top: 1px solid #4c4c4c;
+}
+
+.totalName{
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.totalPrice{
+	font-size: 1rem;
+}
+
+.btn{
+	display: flex;
+	margin: 1.5rem auto 0 auto;
+	padding: 12px 20px;
+	border: none;
+	background: #a7a7a7;
+	color: #4c4c4c;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background: #161616
+}
+
+.closeCart{
+	position: absolute;
+	cursor: pointer;
+	top: .8rem;
+	right: .8rem;
+}
+
+footer{
+	opacity: 1;
+	background-color: rgba('0,0,0,.8');
+}
+
+footer:after{
+	content:'';
+	display: table;
+	clear: both;
+}
+
+.bottomPage{
+	color: var(--footer-word-color);
+	border-top: 1px solid black;
+	opacity: 1;
+	background-color: var(--footer-color);
+}
+
+.foot{
+	width: 95%:
+	margin: 0 auto;
+}
+
+.footerCopyright{
+	float: left;
+}
+
+.other{
+	float: right;
+}
+
+.other ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.other li{
+	display: inline-block;
+	margin-right: 55px;
+}
+
+.other a{
+	text-decoration: none;
+	color: var(--footer-word-color);
+}
+
+
+
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -105px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+}
+
